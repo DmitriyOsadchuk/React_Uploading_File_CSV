@@ -2,20 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let fileSchema = new Schema({
-    email: {
-        type: String
-    },
-    date: {
-        type: String
-    },
-    value: {
-        type: Number
-    },
-    currency: {
-        type: String
-    },
-    status: {
-        type: String
+    id: mongoose.Schema.Types.ObjectId,
+    file: {
+        type: Array
     }
 
 }, {
