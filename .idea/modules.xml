@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/react-mernstack-crud.iml" filepath="$PROJECT_DIR$/.idea/react-mernstack-crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/react-uploading-file-crud.iml" filepath="$PROJECT_DIR$/.idea/react-uploading-file-crud.iml" />
     </modules>
   </component>
 </project>
