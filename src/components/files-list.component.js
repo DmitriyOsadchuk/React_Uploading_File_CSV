@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import StudentTableRow from './StudentTableRow';
+import FilesTableRow from './FilesTableRow';
 
 
-export default class StudentList extends Component {
+export default class FilesList extends Component {
 
     constructor(props) {
         super(props)
@@ -27,7 +27,7 @@ export default class StudentList extends Component {
 
     DataTable() {
         return this.state.list_files.map((res, i) => {
-            return <StudentTableRow obj = { res } key = { i }/>;
+            return <FilesTableRow obj = { res } key = { i }/>;
         });
     }
 
@@ -37,9 +37,11 @@ export default class StudentList extends Component {
             <Table striped bordered hover>
                 <thead>
                 <tr>
-                    <th>Email </th>
+                    <th>User Email </th>
                     <th>Date</th>
-                    <th>Amount</th>
+                    <th>Value</th>
+                    <th>Currency</th>
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
                 </thead>

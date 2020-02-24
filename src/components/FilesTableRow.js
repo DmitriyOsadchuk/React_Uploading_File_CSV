@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 
-export default class StudentTableRow extends Component {
+export default class FilesTableRow extends Component {
 
     constructor(props) {
         super(props);
-        this.deleteStudent = this.deleteStudent.bind(this);
+        this.deleteFile = this.deleteFile.bind(this);
     }
 
-    deleteStudent() {
+    deleteFile() {
         axios.delete('http://localhost:4000/list_files/delete-file/' + this.props.obj._id)
             .then((res) => {
                 console.log('File successfully deleted!')
@@ -22,11 +21,13 @@ export default class StudentTableRow extends Component {
     render() {
         return (
             <tr>
-                <td> { this.props.obj.name } </td>
-                    <td > { this.props.obj.email } </td>
-                    <td> { this.props.obj.rollno } </td>
+                <td> { this.props.obj.user_email } </td>
+                    <td> { this.props.obj.date } </td>
+                    <td> { this.props.obj.value } </td>
+                    <td> { this.props.obj.currency } </td>
+                    <td> { this.props.obj.status } </td>
                 <td>
-                    <Button onClick = { this.deleteStudent } size = "sm" variant = "danger" > Delete </Button>
+                    <Button onClick = { this.deleteFile } size = "sm" variant = "danger" > Delete </Button>
                 </td>
             </tr>
         );

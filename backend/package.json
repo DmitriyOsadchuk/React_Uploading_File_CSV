@@ -1,5 +1,5 @@
 {
-    "name": "mearn-stack-backend",
+    "name": "react-uploading-file-crud",
     "version": "1.0.0",
     "description": "MERN Stack backend",
     "main": "server.js",

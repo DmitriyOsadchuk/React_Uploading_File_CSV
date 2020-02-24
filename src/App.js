@@ -10,7 +10,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import FilesUpload from "./components/files-upload.component";
-import StudentList from "./components/student-list.component";
+import FilesList from "./components/files-list.component";
 
 function App() {
   return (<Router>
@@ -21,7 +21,7 @@ function App() {
 
             <Navbar.Brand>
               <Link to={"/files-upload"} className="nav-link">
-                React MERN Stack App
+                Uploading CSV File App
               </Link>
             </Navbar.Brand>
 
@@ -33,7 +33,7 @@ function App() {
               </Nav>
 
               <Nav>
-                <Link to={"/student-list"} className="nav-link">
+                <Link to={"/files-list"} className="nav-link">
                   File List
                 </Link>
               </Nav>
@@ -50,7 +50,7 @@ function App() {
               <Switch>
                 <Route exact path='/' component={FilesUpload} />
                 <Route path="/files-upload" component={FilesUpload} />
-                <Route path="/student-list" component={StudentList} />
+                <Route path="/files-list" component={FilesList} />
               </Switch>
             </div>
           </Col>

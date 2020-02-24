@@ -10,7 +10,8 @@ const fileRoute = require('../backend/routes/file.route')
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 }).then(() => {
         console.log('Database sucessfully connected!')
     },
@@ -22,7 +23,7 @@ mongoose.connect(dbConfig.db, {
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended: true
+    extended: false
 }));
 app.use(cors());
 app.use('/list_files', fileRoute)
